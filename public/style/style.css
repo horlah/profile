@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Sedgwick+Ave+Display");
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.head {
+  display: flex;
+  background: #000;
+  justify-content: space-around;
+  padding: 15% 0 20%;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+  width: 100%;
+}
+
+.head.blur::before {
+  content: "";
+  color: white;
+  top: 0;
+  left: 0;
+  border: 1px solid white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.head div {
+  align-self: top;
+}
+
+.head .img {
+  text-align: center;
+}
+
+.head .img img {
+  width: 80%;
+}
+
+.head .text {
+  text-align: right;
+  color: white;
+}
+
+.head .text #love {
+  padding: 2% 23%;
+  font-size: .8rem;
+}
+
+.head .text li {
+  display: inline;
+  padding: 1% 0;
+}
+
+.head .text li span {
+  font-weight: bold;
+}
+
+.head .text h3, .head .text p {
+  margin: 0;
+}
+
+.head .text h3 {
+  padding: 4% 3% 1%;
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.head .text p {
+  padding: 0% 0% 3%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.head .text hr {
+  width: 10%;
+  border-color: #fff;
+  text-align: center;
+  margin: 0 auto 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .head {
+    padding: 5% 0 100%;
+    flex-direction: row;
+    box-shadow: 0px 5px 15px -4px #333;
+  }
+  .head div {
+    align-self: center;
+  }
+  .head .img {
+    width: 25%;
+  }
+  .head .img img {
+    width: 100%;
+    transform: translate(70vh, 0);
+    transition: all 1.5s;
+    opacity: 0;
+  }
+  .head .text {
+    width: 45%;
+    text-align: right;
+    color: white;
+    transform: translate(50vh, 0);
+    transition: all 1.5s;
+    opacity: 0;
+  }
+  .head .text #love {
+    padding: 2% 3%;
+    font-size: .8rem;
+  }
+  .head .text li {
+    display: inline;
+    padding: 1% 3%;
+  }
+  .head .text li span {
+    font-weight: bold;
+  }
+  .head .text h3, .head .text p {
+    margin: 0;
+  }
+  .head .text h3 {
+    padding: 4% 3% 1%;
+    font-size: 5rem;
+    font-family: 'Sedgwick Ave Display', cursive;
+    text-align: right;
+  }
+  .head .text p {
+    padding: 0% 3% 3%;
+    font-weight: bold;
+    text-align: right;
+  }
+  .head .text hr {
+    display: block;
+    float: right;
+    margin: 0 3% 0 0;
+  }
+}
+
+.body {
+  z-index: 5;
+  margin-bottom: 25%;
+  padding-bottom: 5%;
+  margin-top: 120%;
+  position: relative;
+}
+
+.body .space {
+  height: 20vh;
+  background: linear-gradient(transparent, black);
+}
+
+@media only screen and (min-width: 768px) {
+  .body {
+    margin-bottom: 25%;
+    padding-bottom: 5%;
+    margin-top: 32%;
+    position: relative;
+  }
+}
+
+.quote {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .quote {
+    width: 40%;
+    top: 2%;
+    left: 30%;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    display: block;
+    position: absolute;
+    box-shadow: 7px 7px 15px -4px #333;
+    transition: all .5s;
+    padding: 2% 0;
+    opacity: 0;
+  }
+  .quote:hover {
+    transform: scale(1.2);
+  }
+  .quote:hover p {
+    transform: scale(1.2);
+  }
+  .quote p {
+    padding: 1% 16%;
+    font-size: 2rem;
+    transform: scale(1.2);
+  }
+  .quote p span {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 0 2%;
+  }
+  .quote p span.text {
+    font-weight: bolder;
+  }
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  padding-top: 15%;
+  background: white;
+}
+
+.works .work {
+  width: 100%;
+  height: 45vh;
+  background: #ccc;
+  position: relative;
+  transform: translate(0, 10%);
+  opacity: 0;
+}
+
+.works .work.one {
+  background: url("../img/mjobs@lifebank.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.works .work.two {
+  background: url("../img/dispatch.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.works .work.tre {
+  background: url("../img/storybook.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.works .work.for {
+  background: url("../img/worthit.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.works .work.remove {
+  transition: all 5s;
+}
+
+.works .work.animate {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 0.8s;
+}
+
+.works .work img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.works .work .info {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3% 3%;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translate(-50%);
+}
+
+.works .work:hover {
+  background-position: bottom;
+}
+
+.works .work:hover .animate {
+  transition: all 5s;
+}
+
+.works .work:hover .info {
+  opacity: 1;
+  transform: translate(0%);
+}
+
+@media only screen and (min-width: 768px) {
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .works .work {
+    width: 35%;
+    height: 60vh;
+    background: #ccc;
+    position: relative;
+    transform: translate(0, 10%);
+    opacity: 0;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 3% 2%;
+  }
+  .works .work img {
+    width: 50%;
+    transition: all 0.5s;
+    display: none;
+  }
+  .works .work .info {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3% 3%;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translate(-50%);
+  }
+  .works .work:hover {
+    background-position: bottom;
+  }
+  .works .work:hover .animate {
+    transition: all 5s;
+  }
+  .works .work:hover .info {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+.section {
+  padding: 2% 5%;
+  background: white;
+}
+
+.section h4 {
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 2% 12%;
+  }
+}
+
+.personal {
+  background: white;
+}
+
+.personal .holder {
+  display: flex;
+  justify-content: center;
+}
+
+.personal .holder .item {
+  margin: 3% 0 5%;
+}
+
+.personal .holder .desc {
+  width: 30%;
+  padding: 0 0 0 3%;
+  border-left: 3px solid #808080;
+}
+
+.personal .holder .desc p, .personal .holder .desc h4 {
+  margin: 0.5% 0;
+}
+
+.personal .holder .info {
+  width: 70%;
+  padding: 0 0 0 2%;
+}
+
+.personal .holder .info p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .personal .holder .item {
+    align-self: center;
+  }
+}
+
+.over {
+  background: white;
+}
+
+.over .holder {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3% 0 0;
+}
+
+.over .holder .item {
+  border-left: 3px solid #808080;
+  margin: 0 0% 4% 0%;
+  padding: 4%;
+  width: 100%;
+  transition: all .5s;
+}
+
+.over .holder .item:hover {
+  background: #ccc;
+}
+
+.over .holder .item h4, .over .holder .item p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .over .holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3% 0 0;
+  }
+  .over .holder .item {
+    border-left: 3px solid #808080;
+    margin: 0 2% 4% 0%;
+    padding: 2%;
+    width: 25%;
+  }
+  .over .holder .item h4, .over .holder .item p {
+    margin: 0;
+  }
+}
+
+.view {
+  background: white;
+}
+
+.view .holder {
+  display: flex;
+  justify-content: center;
+}
+
+.view .holder .item {
+  align-self: center;
+}
+
+.view .holder .desc {
+  width: 30%;
+  padding: 0 0 0 3%;
+  border-left: 3px solid #808080;
+}
+
+.view .holder .desc p, .view .holder .desc h4 {
+  margin: 0.5% 0;
+}
+
+.view .holder .info {
+  padding: 0 0 0 2%;
+  width: 70%;
+}
+
+.foot {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -2;
+  padding: 10% 0;
+}
+
+.foot .holder {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.foot .holder li {
+  display: inline;
+  padding: 1% 3%;
+}
+
+@media only screen and (min-width: 768px) {
+  .foot {
+    padding: 5% 0;
+  }
+  .foot .holder {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+  .foot .holder li {
+    display: inline;
+    padding: 1% 3%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.98);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  transition: all .5s;
+}
+
+.overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay .loader {
+  border: 2px solid white;
+  align-self: center;
+  border-width: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  opacity: 0;
+  animation: one 2s infinite;
+}
+
+@keyframes one {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
